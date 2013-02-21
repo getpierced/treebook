@@ -18,7 +18,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should render the new page when logged in" do
-    sign_in users(:rob)
+    sign_in users(:jason)
     get :new
     assert_response :success
   end
@@ -30,7 +30,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should create status when logged in" do
-    sign_in users(:rob)
+    sign_in users(:jason)
 
     assert_difference('Status.count') do
       post :create, status: { content: @status.content }
@@ -51,7 +51,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should get edit when logged in" do
-    sign_in users(:rob)
+    sign_in users(:jason)
     get :edit, id: @status
     assert_response :success
   end
@@ -63,7 +63,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should update status when logged in" do
-    sign_in users(:rob)
+    sign_in users(:jason)
     put :update, id: @status, status: { content: @status.content }
     assert_redirected_to status_path(assigns(:status))
   end
