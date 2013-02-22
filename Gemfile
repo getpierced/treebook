@@ -9,7 +9,7 @@ gem 'devise'
 gem 'simple_form'
 
 
-group :development do
+group :development, :test do
 	gem 'sqlite3'
 end
 
